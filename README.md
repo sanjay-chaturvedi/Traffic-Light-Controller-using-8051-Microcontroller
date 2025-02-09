@@ -4,7 +4,7 @@ A four way traffic light controller logic is implemented in 8051 microcontroller
 
 ![Combined_Image](https://github.com/user-attachments/assets/f4f806b3-658e-4962-a018-11a4e9c1ed5e)
 
-## Logic  Implementation in microcontrollers PORTs
-The values of PORT in each of the state of traffic light is shown in the below image. During transition from one state to other, all four traffic lights go yellow for a defined duration.
+## Logic  Implementation in microcontroller PORTs
+The values of PORTs in each of the state of traffic light is shown in the below image. During transition from one state to other, all four traffic lights go yellow for a defined duration.
 
 ![Presentation_2](https://github.com/user-attachments/assets/be6f7d35-4cb9-453f-8885-9d7b5b922884)
