@@ -10,6 +10,7 @@ The values of PORTs in each of the state of traffic light is shown in the below 
 ![Presentation_2](https://github.com/user-attachments/assets/be6f7d35-4cb9-453f-8885-9d7b5b922884)
 
 ## Assembly code implementing above logic
+Tha mian program is as follows:
 
 ```assembly
 org 0000h
@@ -44,13 +45,21 @@ BACK:   ACALL YELLOW
 	ACALL YELLOW
 	ACALL DELAYSHORT
 	LJMP BACK
+```
 
+The subroutine for turning on the yellow light is "YELLOW", as shown below.
+
+```assembly
 YELLOW: MOV PO, #04H
 	MOV P1, #04H
 	MOV P2, #04H
 	MOV P3, #04H
 	RET
+```
 
+The time duration for which trafficlights are green and red, is implemented using the subroutine "DELAYLONG". 
+
+```assembly
 DELAYLONG: 
 	H4: MOV R1, #3
 	H3: MOV R2, #14
@@ -61,7 +70,11 @@ DELAYLONG:
 	DJNZ R2, H3
 	DJNZ R1, H4
 	RET
+```
 
+The time duration for which trafficlights are yellow, is implemented using the subroutine "DELAYSHORT". 
+
+```assembly
 DELAYSHORT:
 	H7: MOV R1, #14
 	H6: MOV R2, #248
